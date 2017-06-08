@@ -17,11 +17,13 @@ public class BlockSwitch : MonoBehaviour {
 		sr = GetComponent<SpriteRenderer>();
 
 		if (isActive) {
-			collider.enabled = true;
+			if (collider != null)
+				collider.enabled = true;
 			sr.sprite = block;
 		} 
 		else {
-			collider.enabled = false;
+			if (collider != null)
+				collider.enabled = false;
 			sr.sprite = emptyBlock;
 		}
 	}
@@ -46,11 +48,13 @@ public class BlockSwitch : MonoBehaviour {
 
 	public void Switch(){
 		if (isActive) {
-			collider.enabled = false;
+			if(collider != null)
+				collider.enabled = false;
 			sr.sprite = emptyBlock;
 		} 
 		else {
-			collider.enabled = true;
+			if (collider != null)
+				collider.enabled = true;
 			sr.sprite = block;
 		}
 
