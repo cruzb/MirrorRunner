@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61547462236289682}
   - component: {fileID: 50618452703737322}
   - component: {fileID: 114145637484158848}
+  - component: {fileID: 114529275786633586}
   m_Layer: 0
   m_Name: Ground Spike
   m_TagString: Enemy
@@ -154,6 +155,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114529275786633586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404504534221240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!212 &212227198203235194
 SpriteRenderer:
   m_ObjectHideFlags: 1

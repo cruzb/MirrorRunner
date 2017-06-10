@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114319734937431814}
   - component: {fileID: 114979730397700258}
   - component: {fileID: 114517044123789062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBlock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4014512090418946}
   - component: {fileID: 61882185425343400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4953097447210626}
-  m_Layer: 0
+  - component: {fileID: 114786850764643340}
+  - component: {fileID: 114610881154701776}
+  - component: {fileID: 50961440606165428}
+  m_Layer: 8
   m_Name: BlueBlockTriple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,12 +74,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4717801554236464}
   - component: {fileID: 212993192154630706}
-  - component: {fileID: 50967021412931406}
   - component: {fileID: 61763581462963514}
-  - component: {fileID: 114378781674340662}
-  - component: {fileID: 114654769106296846}
   - component: {fileID: 114792488603687960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 114717655389587950}
   - component: {fileID: 114472871332077080}
   - component: {fileID: 114917507913037940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBlock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,13 +212,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!50 &50967021412931406
+--- !u!50 &50961440606165428
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1871642573311290}
+  m_GameObject: {fileID: 1412048797854360}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -226,7 +226,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -294,18 +294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
---- !u!114 &114378781674340662
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1871642573311290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.25
 --- !u!114 &114472871332077080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,17 +319,18 @@ MonoBehaviour:
   isActive: 1
   block: {fileID: 21300000, guid: 9b3eb2deb00d0534c8dbaa8002f79501, type: 3}
   emptyBlock: {fileID: 21300000, guid: 1adbc70de128b0448a3d2d662d02513a, type: 3}
---- !u!114 &114654769106296846
+--- !u!114 &114610881154701776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1871642573311290}
+  m_GameObject: {fileID: 1412048797854360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
+  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &114717655389587950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,6 +343,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
+--- !u!114 &114786850764643340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1412048797854360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114792488603687960
 MonoBehaviour:
   m_ObjectHideFlags: 1

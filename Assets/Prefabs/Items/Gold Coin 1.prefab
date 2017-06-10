@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114782343479981672}
   - component: {fileID: 61029704046198280}
   m_Layer: 0
-  m_Name: Yellow Gem
+  m_Name: Gold Coin 1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

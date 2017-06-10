@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4876809372168614}
   - component: {fileID: 61314841652119034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,12 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4281121011716438}
   - component: {fileID: 212745804694183730}
-  - component: {fileID: 50852079670421950}
   - component: {fileID: 61442199019964820}
-  - component: {fileID: 114365425066482768}
-  - component: {fileID: 114958595583162432}
   - component: {fileID: 114430463828292110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +58,7 @@ GameObject:
   - component: {fileID: 114004611960152616}
   - component: {fileID: 114631000086124846}
   - component: {fileID: 114588618813677928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +78,7 @@ GameObject:
   - component: {fileID: 114136719293624286}
   - component: {fileID: 114694500112598076}
   - component: {fileID: 114027011029967348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +98,7 @@ GameObject:
   - component: {fileID: 114677593194824580}
   - component: {fileID: 114961166928236650}
   - component: {fileID: 114729744078501560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +118,7 @@ GameObject:
   - component: {fileID: 114338101940311246}
   - component: {fileID: 114422853006803452}
   - component: {fileID: 114865501176995430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +133,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4824285826175784}
-  m_Layer: 0
+  - component: {fileID: 114587691521887288}
+  - component: {fileID: 114568302790303420}
+  - component: {fileID: 50644551223598184}
+  m_Layer: 8
   m_Name: GreenBlockQuintuple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,13 +300,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!50 &50852079670421950
+--- !u!50 &50644551223598184
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153891121362292}
+  m_GameObject: {fileID: 1761401084732510}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -314,7 +314,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -440,18 +440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
---- !u!114 &114365425066482768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153891121362292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.25
 --- !u!114 &114422853006803452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,6 +465,29 @@ MonoBehaviour:
   isActive: 1
   block: {fileID: 21300000, guid: c3f3626c9718fd14c9fed8f5b3ed78b9, type: 3}
   emptyBlock: {fileID: 21300000, guid: 96cb6af2f65f6a64a885cf7582846f91, type: 3}
+--- !u!114 &114568302790303420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761401084732510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &114587691521887288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761401084732510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114588618813677928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -553,17 +564,6 @@ MonoBehaviour:
   isActive: 1
   block: {fileID: 21300000, guid: c3f3626c9718fd14c9fed8f5b3ed78b9, type: 3}
   emptyBlock: {fileID: 21300000, guid: 96cb6af2f65f6a64a885cf7582846f91, type: 3}
---- !u!114 &114958595583162432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153891121362292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114961166928236650
 MonoBehaviour:
   m_ObjectHideFlags: 1

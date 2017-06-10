@@ -29,7 +29,7 @@ public class BlockSwitch : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.touchCount > 0) {
+		/*if (Input.touchCount > 0) {
 			foreach (Touch touch in Input.touches) {
 				if (touch.position.x > Screen.width / 2) {
 					Switch();
@@ -42,11 +42,13 @@ public class BlockSwitch : MonoBehaviour {
 			if (Input.mousePosition.x > Screen.width / 2) {
 				Switch();
 			}
-		}
+		}*/
 	}
 
 
 	public void Switch(){
+		//Debug.Log("Switch Called");
+		
 		if (isActive) {
 			if(collider != null)
 				collider.enabled = false;
@@ -57,8 +59,8 @@ public class BlockSwitch : MonoBehaviour {
 				collider.enabled = true;
 			sr.sprite = block;
 		}
-
 		isActive = !isActive;
+
 	}
 
 

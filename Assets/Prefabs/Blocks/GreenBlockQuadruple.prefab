@@ -19,7 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577990688825054}
-  m_Layer: 0
+  - component: {fileID: 114201570630615352}
+  - component: {fileID: 114343560105281580}
+  - component: {fileID: 50836534975283722}
+  m_Layer: 8
   m_Name: GreenBlockQuadruple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +42,7 @@ GameObject:
   - component: {fileID: 114425084987197536}
   - component: {fileID: 114896771198348418}
   - component: {fileID: 114935145767397088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,12 +58,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4984536510227172}
   - component: {fileID: 212770655446085240}
-  - component: {fileID: 50265924025110844}
   - component: {fileID: 61913082667524920}
-  - component: {fileID: 114890331232222534}
-  - component: {fileID: 114840228787660114}
   - component: {fileID: 114425910718938194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 114167013446727028}
   - component: {fileID: 114032592930743478}
   - component: {fileID: 114160938034790820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4601821293112836}
   - component: {fileID: 61103319166313650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 114552518009200644}
   - component: {fileID: 114344256040774912}
   - component: {fileID: 114456684070759146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBlock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,26 +206,6 @@ Transform:
   m_Father: {fileID: 4577990688825054}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50265924025110844
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1249929335104982}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!50 &50287294099304922
 Rigidbody2D:
   serializedVersion: 4
@@ -261,6 +241,26 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!50 &50836534975283722
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009449525041154}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -373,6 +373,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
+--- !u!114 &114201570630615352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009449525041154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114343560105281580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1009449525041154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &114344256040774912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -430,29 +453,6 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974146738751622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.25
---- !u!114 &114840228787660114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1249929335104982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b68f871c66b94dbc3e507f1dc4db2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114890331232222534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1249929335104982}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab915691530398d438e9f4dd37ccd9a5, type: 3}

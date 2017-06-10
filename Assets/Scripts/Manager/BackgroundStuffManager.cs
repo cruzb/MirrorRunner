@@ -73,7 +73,7 @@ public class BackgroundStuffManager : MonoBehaviour {
 
 	private void DoTrees() {
 		if (lastTimeTreesTop + nextTimeTreesTop < Time.time) {
-			GameObject go = trees[Random.Range(0, grass.Length)];
+			GameObject go = trees[Random.Range(0, trees.Length)];
 			go = Instantiate(go, new Vector3(offScreenX, height, 0), Quaternion.identity);
 			go.GetComponent<SideMover>().speed = moveSpeed;
 
@@ -89,7 +89,7 @@ public class BackgroundStuffManager : MonoBehaviour {
 		}
 
 		if (lastTimeTreesBottom + nextTimeTreesBottom < Time.time) {
-			GameObject go = trees[Random.Range(0, grass.Length)];
+			GameObject go = trees[Random.Range(0, trees.Length)];
 			go = Instantiate(go, new Vector3(offScreenX, -height, 0), Quaternion.identity);
 			go.GetComponent<SideMover>().speed = moveSpeed;
 
