@@ -54,7 +54,7 @@ public class JumpHandler : MonoBehaviour {
 			if (onGround) {
 				if (Input.mousePosition.x < Screen.width / 2) {
 					Jump();
-					Debug.Log("Pressed LEFT side");
+					//Debug.Log("Pressed LEFT side");
 				}
 			}
 		}

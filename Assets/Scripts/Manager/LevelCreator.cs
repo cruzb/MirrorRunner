@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelCreator : MonoBehaviour {
 
 	public GameManager gm;
+	public ScoreManager sm;
 
 	public GameObject[] topPlatforms;
 	public GameObject[] bottomPlatforms;
@@ -47,6 +48,8 @@ public class LevelCreator : MonoBehaviour {
 
 				GameObject go = Instantiate(topPlatforms[index], new Vector3(offScreenX, y, 0), Quaternion.identity);
 				go.GetComponent<SideMover>().speed = levelSpeed;
+				go.transform.GetChild(go.transform.childCount - 1).GetComponent<DestroyBlock>().gm = gm;
+				go.transform.GetChild(go.transform.childCount - 1).GetComponent<PlatformAddScore>().sm = sm;
 
 				gm.blocks.Add(go.transform);
 
@@ -61,6 +64,8 @@ public class LevelCreator : MonoBehaviour {
 
 				GameObject go = Instantiate(bottomPlatforms[index], new Vector3(offScreenX, -y, 0), Quaternion.identity);
 				go.GetComponent<SideMover>().speed = levelSpeed;
+				go.transform.GetChild(go.transform.childCount - 1).GetComponent<DestroyBlock>().gm = gm;
+				go.transform.GetChild(go.transform.childCount - 1).GetComponent<PlatformAddScore>().sm = sm;
 
 				gm.blocks.Add(go.transform);
 

@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)) {
 			if(Input.mousePosition.x > Screen.width / 2) {
 				topActive = !topActive;
-				Debug.Log("Pressed RIGHT side");
+				//Debug.Log("Pressed RIGHT side");
 			}
 		}
 

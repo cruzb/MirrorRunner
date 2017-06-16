@@ -5,13 +5,13 @@ using UnityEngine;
 public class DeathContact : MonoBehaviour {
 
 	public GameManager gm;
-	
-	void Start () {
-		gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.tag == "Enemy") {
+		if(other.tag == "Player") {
+			Debug.Log("Following");
+			if(gm == null)
+				gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
 			gm.EndGame();
 		}
 	}
