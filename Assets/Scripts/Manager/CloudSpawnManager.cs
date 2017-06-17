@@ -20,6 +20,9 @@ public class CloudSpawnManager : MonoBehaviour {
 	public float maxSpeed;
 	public float minSpeed;
 
+	public Color topColor;
+	public Color bottomColor;
+
 	void Start () {
 		lastSpawnTimeTop = 0;
 		lastSpawnTimeBottom = 0;
@@ -36,6 +39,9 @@ public class CloudSpawnManager : MonoBehaviour {
 				Instantiate(clouds[Random.Range(0, clouds.Length)], new Vector3(offScreenX, height, 0), Quaternion.identity);
 
 			go.GetComponent<SimpleMover>().speed = Random.Range(minSpeed, maxSpeed);
+			Color c = topColor;
+			c.a += Random.Range(0, 0.15f);
+			go.GetComponent<SpriteRenderer>().color = c;
 
 			lastSpawnTimeTop = Time.time;
 			nextSpawnTimeTop = Random.Range(minSpawnTime, maxSpawnTime);
@@ -52,6 +58,9 @@ public class CloudSpawnManager : MonoBehaviour {
 			go.transform.localScale = theScale;
 
 			go.GetComponent<SimpleMover>().speed = Random.Range(minSpeed, maxSpeed);
+			Color c = bottomColor;
+			c.a += Random.Range(0, 0.15f);
+			go.GetComponent<SpriteRenderer>().color = c;
 
 			lastSpawnTimeBottom = Time.time;
 			nextSpawnTimeBottom = Random.Range(minSpawnTime, maxSpawnTime);

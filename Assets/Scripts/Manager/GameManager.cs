@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
 	public void EndGame() {
 		tc.Toggle();
 		Time.timeScale = 0;
-		scoreText.text = sm.GetScore().ToString("00000000000");
+		sm.HandleHighScore();
 	}
 	
 	public void RestartGame() {

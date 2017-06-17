@@ -45,6 +45,8 @@ public class LevelCreator : MonoBehaviour {
 				float y = lastY + Random.Range(minY, maxY);
 				if(y < 1f)
 					y = 1f;
+				else if (y > 2.75)
+					y = 2.75f;
 
 				GameObject go = Instantiate(topPlatforms[index], new Vector3(offScreenX, y, 0), Quaternion.identity);
 				go.GetComponent<SideMover>().speed = levelSpeed;
@@ -61,6 +63,8 @@ public class LevelCreator : MonoBehaviour {
 				float y = lastY + Random.Range(minY, maxY);
 				if (y < 1f)
 					y = 1f;
+				else if (y > 2.75)
+					y = 2.75f;
 
 				GameObject go = Instantiate(bottomPlatforms[index], new Vector3(offScreenX, -y, 0), Quaternion.identity);
 				go.GetComponent<SideMover>().speed = levelSpeed;

@@ -25,9 +25,13 @@ public class JumpHandler : MonoBehaviour {
 	private Rigidbody2D rbBottom;
 
 
+	private AudioSource jumpSound;
+
 	void Start () {
 		rbTop = topPlayer.GetComponent<Rigidbody2D>();
 		rbBottom = bottomPlayer.GetComponent<Rigidbody2D>();
+
+		jumpSound = GetComponent<AudioSource>();
 
 		onGround = true;
 	}
@@ -71,5 +75,7 @@ public class JumpHandler : MonoBehaviour {
 			rbBottom.AddForce(transform.up * -jumpForce);
 			onGround = false;
 		}
+
+		jumpSound.Play();
 	}
 }
